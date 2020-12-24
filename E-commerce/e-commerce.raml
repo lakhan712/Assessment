@@ -1,0 +1,129 @@
+#%RAML 1.0
+title: E-commerce
+
+traits:
+  token:
+    queryParameters:
+      token:
+        description: authorized token
+        type: string
+        minLength: 5
+
+
+
+/products:
+  description: It represents products to get products, add product to cart, update product, delete product in cart.
+
+  get:
+    description: It represents to get all products.
+    is: [token]
+    responses:
+      200:
+        description: ok
+        body:
+          application/json:
+            example: !include /Example/product_list.json
+              
+    
+  post:
+    is: [token]
+    description: It represents to add new product in cart.
+    body:
+      application/json:
+        example: !include /Example/post_product.json
+
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              data: Product is added to cart.
+          
+    
+
+  /{id}:
+    is: [token]
+    description: get/update/delete spcific product
+    uriParameters:
+      id:
+        description: unique identifier 
+        type: string
+        example: "101"
+
+    get:
+      description: retrieve single product based on id.
+      responses:
+        200:
+          description: ok
+          body:
+            application/json:
+              example: !include /Example/single_product.json
+                
+    
+    put:
+      description: update single product based on id
+      body:
+        application/json:
+          example: !include /Example/post_product.json
+        
+      responses:
+        200:
+          description: Updated product in cart
+          body:
+            application/json:
+              example:
+                data : Updated product in cart
+              
+            
+    
+    delete:
+      description: delete single product from cart based on id
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                data: product is removed from cart
+      
+
+/cart:
+  is: [token]
+  description: products in cart
+  get:
+    description: get all products in cart
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /Example/cart.json
+
+  /{id}:
+    is: [token]
+    get:
+      description: get specific product price from cart based on id
+      responses:
+        200:
+          body:
+            application/json:
+              example: { "Total price before tax": "47,900.00", 
+                          "Total price after tax": "50295" }
+
+    delete:
+      description: delete product from cart based on id
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                data: Product is removed from cart
+         
+           
+
+      
+            
+
+
+          
+              
+    
+    

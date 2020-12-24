@@ -1,0 +1,50 @@
+{
+  "Mobiles": [
+    {
+    "id": 101,
+    "name": "iPhone 11 (128GB)",
+    "price": "58,999.00",
+    "color": "green"
+ },
+  {
+    "id": 102,
+    "name": "iPhone XR 64GB",
+    "price": "47,900.00",
+    "color": "black"
+ },
+
+  {
+    "id": 103,
+    "name": "iPhone 12 Mini (64GB)",
+    "price": "69,900.00",
+    "color": "blue"
+ },
+
+  {
+    "id": 104,
+    "name": "iPhone 12 Pro (128GB) ",
+    "price": "119,900.00",
+    "color": "blue"
+ },
+
+  {
+    "id": 105,
+    "name": "iPhone 12 Pro Max (128GB)",
+    "price": "1,29,900.00",
+    "color": "Pacific Blue"
+ },
+  {
+    "id": 106,
+    "name": "Samsung Galaxy M51",
+    "price": "22,999.00",
+    "color": "Electric Blue"
+ },
+
+  {
+    "id": 107,
+    "name": "Samsung Galaxy M31s",
+    "price": "19,499.00",
+    "color": "Mirage Blue"
+ }
+  ]
+}

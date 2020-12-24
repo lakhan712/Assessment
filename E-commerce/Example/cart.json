@@ -1,0 +1,21 @@
+{
+  "Product":
+  [ 
+  {
+    "id": 105,
+    "name": "iPhone 12 Pro Max (128GB)",
+    "price": "1,29,900.00",
+    "color": "Pacific Blue"
+  },
+  {
+    "id": 102,
+    "name": "iPhone XR 64GB",
+    "price": "47,900.00",
+    "color": "black"
+ },
+ {
+   "total price before tax": "177800.00",
+   "Total price with tax": "186690.00"
+ }
+  ]
+}
